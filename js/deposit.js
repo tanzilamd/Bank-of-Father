@@ -1,3 +1,7 @@
+if (localStorage.getItem("totalBalanceLocal") !== null) {
+    document.getElementById('balance-total').innerText = localStorage.getItem("totalBalanceLocal");
+}
+
 if ((localStorage.getItem("totalDepositLocal") !== null) && (localStorage.getItem("totalBalanceLocal") !== null)) {
     document.getElementById('deposit-total').innerText = localStorage.getItem("totalDepositLocal");
     document.getElementById('balance-total').innerText = localStorage.getItem("totalBalanceLocal");
