@@ -17,6 +17,8 @@ document.getElementById('btn-set-balance').addEventListener('click', function(){
         newBalanceField.value = "";
 
         window.location.href = "bank.html";
+
+        document.getElementById('balance-total').innerText = localStorage.getItem("totalBalanceLocal");
     }
 })
 
