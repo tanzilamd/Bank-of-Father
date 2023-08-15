@@ -1,3 +1,7 @@
+if ((localStorage.getItem("totalDepositLocal") !== null) && (localStorage.getItem("totalBalanceLocal") !== null)) {
+    document.getElementById('deposit-total').innerText = localStorage.getItem("totalDepositLocal");
+    document.getElementById('balance-total').innerText = localStorage.getItem("totalBalanceLocal");
+}
 
 document.getElementById('btn-deposit').addEventListener('click', function(){
     // New amount deposit
@@ -30,6 +34,17 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
         const newTotalBalance = balanceTotal + newDepositAmount;
 
         balanceTotalString.innerText = newTotalBalance;
+
+        // Local Storage
+        localStorage.setItem("totalDepositLocal", currentDepositTotal);
+        localStorage.setItem("totalBalanceLocal", newTotalBalance);
+
+        // Showing data in frontend
+        // DepositTotal.innerText = localStorage.getItem("totalDepositLocal");
+        // balanceTotalString.innerText = localStorage.getItem("totalBalanceLocal");
+
+
+        console.log(localStorage.getItem("totalDepositLocal"))
     }
 
     depositAmountElement.value = "";

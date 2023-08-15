@@ -1,3 +1,8 @@
+if ((localStorage.getItem("totalWithdrawLocal") !== null) && (localStorage.getItem("totalBalanceLocal") !== null)) {
+    document.getElementById('withdraw-total').innerText = localStorage.getItem("totalWithdrawLocal");
+    document.getElementById('balance-total').innerText = localStorage.getItem("totalBalanceLocal");
+}
+
 document.getElementById('btn-withdraw').addEventListener('click', function(){
     // New Withdraw amount
     const withdrawAmountElement = document.getElementById('withdraw-amount');
@@ -32,6 +37,10 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
         // Minus in total balance
         const balanceTotal = parseFloat(balanceTotalString.innerText) - newWithdrawAmount;
         balanceTotalString.innerText = balanceTotal;
+
+        // Local Storage
+        localStorage.setItem("totalWithdrawLocal", currentWithdrawTotal);
+        localStorage.setItem("totalBalanceLocal", balanceTotal);
     }
 
     withdrawAmountElement.value = "";
