@@ -3,6 +3,9 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const withdrawAmountElement = document.getElementById('withdraw-amount');
     const newWithdrawAmountString = withdrawAmountElement.value;
     const newWithdrawAmount = parseFloat(newWithdrawAmountString)
+
+    // Check Total balance
+    const balanceTotalString = document.getElementById('balance-total');
     
     if(newWithdrawAmount <= 0) {
         alert("Deposit Amount should be grater than 0!");
@@ -26,10 +29,8 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
 
         withdrawTotal.innerText = currentWithdrawTotal
 
-        // Total balance
-        const balanceTotalString = document.getElementById('balance-total');
+        // Minus in total balance
         const balanceTotal = parseFloat(balanceTotalString.innerText) - newWithdrawAmount;
-
         balanceTotalString.innerText = balanceTotal;
     }
 
