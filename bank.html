@@ -8,12 +8,12 @@
 </head>
 <body>
     <header>
-        <h1 class="text-5xl text-center my-6">Let's get some <span class="font-semibold text-indigo-400">Mooooney!!</span></h1>
+        <h1 class="text-5xl text-center my-6 mx-4 md:mx-0">Let's get some <span class="font-semibold text-indigo-400">Mooooney!!</span></h1>
     </header>
 
     <main>
-        <section class="mt-12">
-            <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto">
+        <section class="mt-12 mx-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full md:w-9/12 mx-auto">
                 <div class="bg-green-400 text-white p-8 space-y-2 rounded-xl">
                     <h4 class="text-2xl">Deposit</h4>
                     <h2 class="text-5xl">$<span id="deposit-total">00</span></h2>
@@ -31,17 +31,17 @@
         </section>
 
         <!-- Deposit and Withdraw -->
-        <section class="mt-12">
-            <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto text-white">
+        <section class="mt-12 mx-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-9/12 mx-auto text-white">
                 <div class="bg-fuchsia-400 p-8 rounded-xl space-y-4">
                     <h4 class="text-2xl">Please Deposit</h4>
-                    <input id="deposit-amount" class="py-1 px-3 w-9/12 block text-black" type="text" name="" id="" placeholder="$ Amount You Want to Deposit">
+                    <input id="deposit-amount" class="py-1 px-3 w-full md:w-9/12 block text-black" type="text" name="" id="" placeholder="$ Amount You Want to Deposit">
                     <button id="btn-deposit" class="btn btn-primary bg-amber-500 hover:bg-blue-500 px-6 py-2 font-medium rounded-md text-white">Deposit</button>
                 </div>
 
                 <div class="bg-sky-400 p-8 rounded-xl space-y-4">
                     <h4 class="text-2xl">Please Withdraw</h4>
-                    <input id="withdraw-amount" class="py-1 px-3 w-9/12 block text-black" type="text" name="" id="" placeholder="$ Amount You Want to Withdraw">
+                    <input id="withdraw-amount" class="py-1 px-3 w-full md:w-9/12 block text-black" type="text" name="" id="" placeholder="$ Amount You Want to Withdraw">
                     <button id="btn-withdraw" class="btn btn-primary bg-amber-500 hover:bg-yellow-500 px-6 py-2 font-medium rounded-md text-white">Withdraw</button>
                 </div>
             </div>
